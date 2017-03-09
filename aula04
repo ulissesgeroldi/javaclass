@@ -1,0 +1,21 @@
+/*
+AplicaçãoContaBancaria.java
+ */
+package Aplicacao;
+
+import Modelos.ContaBancaria;
+
+public class AplicacaoContaBancaria {
+
+    public static void main(String[] args) {
+      ContaBancaria b1 = new ContaBancaria();
+      ContaBancaria b2 = new ContaBancaria();
+      
+      b1.AbreConta("ulisses", 1000.00, true);
+      b2.AbreConta("Maria", 20000, false);
+      
+      b1.mostradados();
+      b2.mostradados();
+    }
+    
+}
