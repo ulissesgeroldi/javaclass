@@ -1,0 +1,59 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author fpi.0019519193
+ */
+package Modelos;
+
+public class Data {
+    byte dia;
+    byte mes;
+    short ano;
+    
+    boolean dataValida(byte d, byte m, short a)
+    {
+        if((d>=1 && d<=31) && (m>0 && m<13) && (a>=1900))
+        {
+            return true;
+        }
+        else
+            return false;
+                
+    }
+    
+    void inicializaData(byte dd, byte mm, short aa)
+    {
+        boolean verifica = dataValida(dd, mm, aa);
+        
+        if (verifica == true)
+        {
+            dia = dd;
+            mes = mm;
+            ano = aa;
+        }
+        else
+        {
+            dia = 0;
+            mes = 0;
+            ano = 0;
+        }
+    }
+    
+    void mostraData()
+    {
+        /*String saida = dia + "/" + mes + "/" + ano;
+        System.out.print(saida);*/
+        
+        System.out.print(dia);
+        System.out.print("/");
+        System.out.print(mes);
+        System.out.print("/");
+        System.out.print(ano);
+    }
+    
+}
