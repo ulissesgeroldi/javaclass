@@ -1,0 +1,35 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Aplicacao;
+
+import Modelos.Data;
+
+/**
+ *
+ * @author fpi.0075602443
+ */
+public class AplicacaoData {
+    
+    public static void main(String[] args){
+        
+        Data d1 = new Data();
+        
+        /* Criei as Variaveis para declarar o Tipo correto, ocorreu problemas 
+        na Conversão Automatica, caso o Compilador Java Gritar erro de conversão de dados,
+        verificar declaração ou posso usar um Cast:
+        d2.inicializaData((byte)10,(byte)12,(byte)2017);*/
+        
+        byte dDia, mMes;
+        short aAno;
+        
+        dDia = 16; mMes = 12; aAno = 1992; 
+    
+    d1.inicializaData(dDia,mMes,aAno);
+    d1.mostraData();
+    
+    }
+    
+}
